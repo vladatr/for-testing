@@ -13,8 +13,10 @@ export const Calc = () => {
     const handleNumPadClick = (num: string) => {
       if (op && !ff) {
         setOp("");
-      setFf("");
+        setFf("");
         setRes("");
+      } else {
+        setFf(`${ff}${num}`)
       }
       setInput1(`${input1}${num}`);
     }
